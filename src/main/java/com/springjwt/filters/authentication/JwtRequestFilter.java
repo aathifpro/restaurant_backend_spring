@@ -1,6 +1,6 @@
 package com.springjwt.filters.authentication;
 
-import com.springjwt.services.authentication.jwt.UserDetailsServiceImpl;
+import com.springjwt.services.authentication.jwt.impl.UserDetailsServiceImpl;
 import com.springjwt.util.authentication.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

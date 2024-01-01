@@ -2,7 +2,7 @@ package com.springjwt.controllers.authentication;
 
 import com.springjwt.dto.authentication.AuthenticationDTO;
 import com.springjwt.dto.authentication.AuthenticationResponse;
-import com.springjwt.services.authentication.jwt.UserDetailsServiceImpl;
+import com.springjwt.services.authentication.jwt.impl.UserDetailsServiceImpl;
 import com.springjwt.util.authentication.JwtUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
