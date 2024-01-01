@@ -1,4 +1,4 @@
-package com.springjwt.services.authentication.jwt;
+package com.springjwt.services.authentication.jwt.impl;
 
 import com.springjwt.entities.authentication.User;
 import com.springjwt.repositories.authentication.UserRepository;
