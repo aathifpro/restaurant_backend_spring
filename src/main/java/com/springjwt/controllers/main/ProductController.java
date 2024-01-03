@@ -4,17 +4,15 @@ package com.springjwt.controllers.main;
 import com.springjwt.common.CommonResponse;
 import com.springjwt.common.StatusCode;
 import com.springjwt.dto.main.ProductDTO;
-import com.springjwt.dto.main.ProductResponseDTO;
+import com.springjwt.dto.main.responseDto.ProductResponseDTO;
 import com.springjwt.entity.main.Product;
 import com.springjwt.services.main.ProductService;
-import jakarta.persistence.Id;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Statement;
 import java.util.List;
 
 @RestController
@@ -95,6 +93,13 @@ public class ProductController {
         }
     }
 
+    /**
+     * Delete order request
+     *
+     * @param id - required variable to delete product
+     * @return success or failed response from product
+     * @author aathif
+     */
     @DeleteMapping("/product/{id}")
     public ResponseEntity<ProductResponseDTO> deleteProduct(@PathVariable("id") long id) {
         ProductResponseDTO productResponse = productService.deleteProduct(id);
@@ -104,8 +109,5 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-
-
 
 }

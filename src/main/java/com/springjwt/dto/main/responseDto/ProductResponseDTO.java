@@ -1,4 +1,4 @@
-package com.springjwt.dto.main;
+package com.springjwt.dto.main.responseDto;
 
 import com.springjwt.entity.main.Product;
 import lombok.AllArgsConstructor;

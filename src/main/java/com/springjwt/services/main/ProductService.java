@@ -1,7 +1,7 @@
 package com.springjwt.services.main;
 
 import com.springjwt.dto.main.ProductDTO;
-import com.springjwt.dto.main.ProductResponseDTO;
+import com.springjwt.dto.main.responseDto.ProductResponseDTO;
 import com.springjwt.entity.main.Product;
 import org.springframework.http.ResponseEntity;
 

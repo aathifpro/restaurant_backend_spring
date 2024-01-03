@@ -2,7 +2,6 @@ package com.springjwt.mapper;
 
 import com.springjwt.dto.main.ProductDTO;
 import com.springjwt.entity.main.Product;
-import org.springframework.security.core.parameters.P;
 
 import java.util.Optional;
 

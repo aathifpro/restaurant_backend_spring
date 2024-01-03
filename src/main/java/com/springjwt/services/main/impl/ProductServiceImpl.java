@@ -2,7 +2,7 @@ package com.springjwt.services.main.impl;
 
 import com.springjwt.common.StatusCode;
 import com.springjwt.dto.main.ProductDTO;
-import com.springjwt.dto.main.ProductResponseDTO;
+import com.springjwt.dto.main.responseDto.ProductResponseDTO;
 import com.springjwt.entity.main.Product;
 import com.springjwt.mapper.ProductMapper;
 import com.springjwt.repository.main.ProductRepository;
@@ -109,6 +109,13 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+    /**
+     * Delete order request
+     *
+     * @param id - required variable to delete product
+     * @return success or failed response from product
+     * @author aathif
+     */
     @Override
     public ProductResponseDTO deleteProduct(long id) {
         try {
