@@ -2,8 +2,8 @@ package com.springjwt.services.authentication.auth.impl;
 
 import com.springjwt.dto.authentication.SignupDTO;
 import com.springjwt.dto.authentication.UserDTO;
-import com.springjwt.entities.authentication.User;
-import com.springjwt.repositories.authentication.UserRepository;
+import com.springjwt.entity.authentication.User;
+import com.springjwt.repository.authentication.UserRepository;
 import com.springjwt.services.authentication.auth.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
