@@ -22,7 +22,7 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    private ProductService productService;
+    ProductService productService;
 
     /**
      * Create product request

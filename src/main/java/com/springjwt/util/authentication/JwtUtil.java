@@ -22,6 +22,7 @@ public class JwtUtil {
         return extractClaim(token, Claims::getSubject);
     }
 
+
     public Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration);
     }
@@ -59,7 +60,7 @@ public class JwtUtil {
                 .setClaims(claims)
                 .setSubject(userName)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis()+1000*60*30))
+                .setExpiration(new Date(System.currentTimeMillis()+1000*60*60))
                 .signWith(getSignKey(), SignatureAlgorithm.HS256).compact();
     }
 
