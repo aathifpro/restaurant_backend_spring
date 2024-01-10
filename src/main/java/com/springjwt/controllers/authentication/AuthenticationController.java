@@ -5,6 +5,7 @@ import com.springjwt.dto.authentication.AuthenticationResponse;
 import com.springjwt.services.authentication.jwt.impl.UserDetailsServiceImpl;
 import com.springjwt.util.authentication.JwtUtil;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -17,8 +18,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 @RestController
+@Slf4j
 public class AuthenticationController {
 
     @Autowired
@@ -44,8 +50,10 @@ public class AuthenticationController {
         final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationDTO.getEmail());
 
         final String jwt = jwtUtil.generateToken(userDetails.getUsername());
+        final Date expireDate = jwtUtil.extractExpiration(jwt);
+        log.info("JWT token: {} and expired: {}", jwtUtil, expireDate);
 
-        return new AuthenticationResponse(jwt);
+        return new AuthenticationResponse(jwt, expireDate, new Date());
 
     }
 

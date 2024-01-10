@@ -1,5 +1,7 @@
 package com.springjwt.dto.authentication;
 
-public record AuthenticationResponse(String jwtToken) {
+import java.util.Date;
+
+public record AuthenticationResponse(String jwtToken, Date expireDate, Date nowDate) {
 
 }
